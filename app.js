@@ -1,40 +1,13 @@
-// alert(123);
+const numbers = [43, 56, 33, 23, 44, 36, 5];
+const numbers2 = new Array(22, 45, 33, 76, 54);
 
-const name = 'John';
-const age = 29;
-const job = 'Co-Founder';
-const city = 'Auckland';
+const fruit = new Array('Apple', 'Banana', 'Orange', 'Pear');
+const mixed = new Array(22, 'Hello', true, undefined, null, {a:2, b:1}, new Date());
 
-let html;
+let val;
 
-// Without template strings (es5)
-// html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + '</li><li>Job: ' + job + '</li><li>City: ' + city + '</li></ul>';
+// Get array length
+val =
 
-// html = '<ul><li>Name: ' + name + '</li><li>Age: ' + age + ' </li><li>Job: '+ job+ ' </li><li>City: '+ city +' </li></ul>';
-
-// html = '<ul>' + 
-//         '<li>Name: '+ name + '</li>' +
-//         '<li>Name: '+ age + '</li>' +
-//         '<li>Name: '+ job + '</li>' +
-//         '<li>Name: '+ city + '</li>' +
-//         '</ul>';
-
-//  With template strings
-
-function hello(){
-    return 'hello';
-}
-
-html = `
-    <ul>
-        <li>Name: ${name}</li>
-        <li>Age: ${age}</li>
-        <li>Job: ${job}</li>
-        <li>City: ${city}</li>
-        <li>${2 + 2}</li>
-        <li>${hello()}</li>
-        <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
-    </ul>
-`;
-
-document.body.innerHTML = html;
+console.log(numbers);
+console.log(val);
