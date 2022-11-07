@@ -1,29 +1,63 @@
-let val;
+// if (something){
+//         do something
+// } 
+// else {
+//     do something else
+// }
 
-const today = new Date();
-let birthday = new Date('9-10-1981 11:25:00');
-// Multiple ways to set date, please read documentation for date
-birthday = new Date('December 13 1921');
+const id = '100';
 
-// getMonth method is 0 based, so 10 = November since - is January and this file was created in November 2022
+// // EQUAL TO
+// if(id == 101){
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
 
-val = today.getMonth();
-val = today.getDate();
-// getDay method gives numerical number of the day, starting from 0 = Sunday
-val = today.getDay();
-val = today.getFullYear();
-val = today.getHours();
-val = today.getMinutes();
-val = today.getSeconds();
-val = today.getMilliseconds();
-// getTime is timestamp
-val = today.getTime();
+// // NOT EQUAL TO
+// if(id != 101){
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
 
-birthday.setMonth(2);
-birthday.setDate(12);
-birthday.setFullYear(1991);
-birthday.setHours(3);
-birthday.setMinutes(20);
-birthday.setSeconds(10);
+// // EQUAL TO VALUE & TYPE
+// // Use triple equal by default
+// if(id === 101){
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
 
-console.log(birthday);
+// // NOT EQUAL TO VALUE & TYPE
+// if(id !== 100){
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
+
+// Test to check if variable is undefined
+// if(typeof id !== 'undefined'){
+//     console.log(`The ID is ${id}`);
+// }   else {
+//     console.log('NO ID');
+// }
+
+// Greater or Less Than
+// if(id > 200){
+//     console.log('CORRECT');
+// } else {
+//     console.log('INCORRECT');
+// }
+
+// IF ELSE
+const color = 'yellow';
+
+// if(color === 'red') {
+//     console.log('Color is red');
+// } else if(color === 'blue') {
+//     console.log('Color is blue');
+// } else {
+//     console.log('Color is not red or blue');
+// }
+
