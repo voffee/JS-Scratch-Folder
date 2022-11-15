@@ -1,54 +1,29 @@
-// Window Methods / Objects / Properties
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
 
-// Alert
-// alert('Hello World');
+// Function Scope
+// function test() {
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
 
-//Prompt
-// const input = prompt();
-// alert(input);
-
-//Confirm
-// if(confirm('Are you sure?')){
-//     console.log('YES');
-// } else {
-//     console.log('NO');
+//     console.log('Function Scope: ', a, b, c);
 // }
 
-let val;
-// Outer Height and Width
-// val = window.outerHeight;
-// val = window.outerWidth;
+// test();
 
-// Inner Height and Width
-// val = window.innerHeight;
-// val = window.innerWidth;
+// Block Level Scope
+// if(true) {
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
+//     console.log('Block Scope: ', a, b, c);
+// }
 
-// Scroll Points
-// val = window.scrollY;
+for(var a = 0; a < 10; a++) {
+    console.log(`Loop: ${a}`);
+}
 
-// Location Object;
-// Finds physical location! ip add etc
-val = window.location;
-val = window.location.hostname;
-val = window.location.port;
-val = window.location.href;
-val = window.location.search;
-
-// Redirect
-// window.location.href = 'http://google.com';
-// Reload
-// window.location.reload();
-
-// History Object
-// window.history.go(-2);
-// val = window.history.length;
-
-// Navigator Object
-val = window.navigator;
-val = window.navigator.appName;
-val = window.navigator.appVersion;
-val = window.navigator.userAgent;
-val = window.navigator.platform;
-val = window.navigator.vendor;
-val = window.navigator.language;
-console.log(val);
+console.log('Global Scope: ', a, b, c)
