@@ -1,54 +1,41 @@
-// Replace Element
 
-// Create Element
-const newHeading = document.createElement('h2');
+// document.querySelector('.clear-tasks').addEventListener('click', function(e){
+//     console.log('Hello World');
 
-// Add ID
-newHeading.id = 'task-title';
+//     // e.preventDefault();
+// });
 
-// New text node
-newHeading.appendChild(document.createTextNode('Task List'));
 
-// Get the old heading
-const oldHeading = document.getElementById('task-title');
+document.querySelector('.clear-tasks').addEventListener('click', onclick);
 
-// Parent
-const cardAction = document.querySelector('.card-action');
+function onclick(e){
+    // console.log('Clicked');
 
-// Replace
-cardAction.replaceChild(newHeading, oldHeading);
+    let val;
+    val = e;
 
-// Remove Element
+    // Event target element
+    val = e.target;
+    val = e.target.id;
+    val = e.target.className;
+    val = e.target.classList;
 
-const lis = document.querySelectorAll('li');
-const list = document.querySelector('ul');
+    // Not sure how below code works, the e?
+    // e.target.innerText = 'Hello';
 
-// Remove list item
-lis[0].remove();
+    // Event type
+    val = e.type;
 
-// Remove child element
-list.removeChild(lis[3]);
+    // Timestamp
+    val = e.timeStamp;
 
-// Classes and Attributes
-const firstLi = document.querySelector('li:first-child');
-const link = firstLi.children[0];
+    //  Coords event relative to the window
+    val = e.clientY;
+    val = e.clientX;
 
-let val;
+    //  Coords event relative to the element
+    val = e.offsetY;
+    val = e.offsetX;
 
-// Classes
-
-val = link.className;
-val = link.classList;
-val = link.classList[0];
-link.classList.add('TEST');
-link.classList.remove('TEST');
-val = link;
-
-// Attributes
-val = link.getAttribute('href');
-val = link.setAttribute('href', 'http://google.com');
-link.setAttribute('title', 'Google');
-val = link.hasAttribute('title');
-link.removeAttribute('title');
-val = link;
-console.log(val);
+    console.log(val);
+}
