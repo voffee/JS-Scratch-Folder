@@ -1,41 +1,42 @@
 
-// document.querySelector('.clear-tasks').addEventListener('click', function(e){
-//     console.log('Hello World');
+const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
 
-//     // e.preventDefault();
-// });
+const heading = document.querySelector('h5');
 
+// Click
+// clearBtn.addEventListener('click', runEvent);
 
-document.querySelector('.clear-tasks').addEventListener('click', onclick);
+// Double Click
+// clearBtn.addEventListener('dblclick', runEvent);
 
-function onclick(e){
-    // console.log('Clicked');
+// Mousedown
+// clearBtn.addEventListener('mousedown', runEvent);
 
-    let val;
-    val = e;
+// Mouseup
+// clearBtn.addEventListener('mouseup', runEvent);
 
-    // Event target element
-    val = e.target;
-    val = e.target.id;
-    val = e.target.className;
-    val = e.target.classList;
+// Mouseenter
+// card.addEventListener('mouseenter', runEvent);
 
-    // Not sure how below code works, the e?
-    // e.target.innerText = 'Hello';
+// Mouseleave
+// card.addEventListener('mouseleave', runEvent);
 
-    // Event type
-    val = e.type;
+// Mouseover
+// card.addEventListener('mouseover', runEvent);
 
-    // Timestamp
-    val = e.timeStamp;
+// Mouseout
+// card.addEventListener('mouseout', runEvent);
 
-    //  Coords event relative to the window
-    val = e.clientY;
-    val = e.clientX;
+// Mousemove
+card.addEventListener('mousemove', runEvent);
 
-    //  Coords event relative to the element
-    val = e.offsetY;
-    val = e.offsetX;
+// Event Handler
+function runEvent(e){
+    console.log(`EVENT TYPE: ${e.type}`);
 
-    console.log(val);
+    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
 }
+
+// Really need to understand and memorize how the above code works, it's super useful when making own apps.
