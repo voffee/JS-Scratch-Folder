@@ -1,42 +1,55 @@
 
-const clearBtn = document.querySelector('.clear-tasks');
-const card = document.querySelector('.card');
-
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
+const select = document.querySelector('select');
 
-// Click
-// clearBtn.addEventListener('click', runEvent);
+// form.addEventListener('submit', runEvent);
 
-// Double Click
-// clearBtn.addEventListener('dblclick', runEvent);
+// Clear input, used to clear forms
+taskInput.value = '';
 
-// Mousedown
-// clearBtn.addEventListener('mousedown', runEvent);
+// Keydown
+// taskInput.addEventListener('keydown', runEvent);
 
-// Mouseup
-// clearBtn.addEventListener('mouseup', runEvent);
+// Key Up
+// taskInput.addEventListener('keyup', runEvent);
 
-// Mouseenter
-// card.addEventListener('mouseenter', runEvent);
+// Key Press
+// taskInput.addEventListener('keypress', runEvent);
 
-// Mouseleave
-// card.addEventListener('mouseleave', runEvent);
+// Focus
+// taskInput.addEventListener('focus', runEvent);
 
-// Mouseover
-// card.addEventListener('mouseover', runEvent);
+// Blur
+// taskInput.addEventListener('blur', runEvent);
 
-// Mouseout
-// card.addEventListener('mouseout', runEvent);
+// Cut
+// taskInput.addEventListener('cut', runEvent);
 
-// Mousemove
-card.addEventListener('mousemove', runEvent);
+// Copy
+// taskInput.addEventListener('copy', runEvent);
 
-// Event Handler
+// Paste
+// taskInput.addEventListener('paste', runEvent);
+
+// Input
+// taskInput.addEventListener('input', runEvent);
+
+// Change
+select.addEventListener('change', runEvent);
+
 function runEvent(e){
     console.log(`EVENT TYPE: ${e.type}`);
 
-    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
-    document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
-}
+    // console.log(e.target.value);
 
-// Really need to understand and memorize how the above code works, it's super useful when making own apps.
+    // Update text in header to show live typing
+    // heading.innerText = e.target.value;
+
+    // Get input value
+    console.log(taskInput.value);
+    
+    // When doing a submit, usually have to use prevent default method.
+    // e.preventDefault();
+}
