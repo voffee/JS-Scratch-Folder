@@ -1,55 +1,43 @@
 
-const form = document.querySelector('form');
-const taskInput = document.getElementById('task');
-const heading = document.querySelector('h5');
-const select = document.querySelector('select');
+// Event Bubbling
 
-// form.addEventListener('submit', runEvent);
+// document.querySelector('.card-title').addEventListener('click', 
+// function(){
+//     console.log('card title')
+// });
 
-// Clear input, used to clear forms
-taskInput.value = '';
+// document.querySelector('.card-content').addEventListener('click', 
+// function(){
+//     console.log('card content')
+// });
 
-// Keydown
-// taskInput.addEventListener('keydown', runEvent);
+// document.querySelector('.card').addEventListener('click', 
+// function(){
+//     console.log('card')
+// });
 
-// Key Up
-// taskInput.addEventListener('keyup', runEvent);
+// document.querySelector('.col').addEventListener('click', 
+// function(){
+//     console.log('col')
+// });
 
-// Key Press
-// taskInput.addEventListener('keypress', runEvent);
+// Event Delegation
 
-// Focus
-// taskInput.addEventListener('focus', runEvent);
+// const delItem = document.querySelector('.delete-item');
 
-// Blur
-// taskInput.addEventListener('blur', runEvent);
+// delItem.addEventListener('click', deleteItem);
 
-// Cut
-// taskInput.addEventListener('cut', runEvent);
+document.body.addEventListener('click', deleteItem);
 
-// Copy
-// taskInput.addEventListener('copy', runEvent);
+function deleteItem(e){
+    // console.log(e.target);
 
-// Paste
-// taskInput.addEventListener('paste', runEvent);
+    // if(e.target.parentElement.className === 'delete-item secondary-content'){
+    //     console.log('delete item');
+    // }
 
-// Input
-// taskInput.addEventListener('input', runEvent);
-
-// Change
-select.addEventListener('change', runEvent);
-
-function runEvent(e){
-    console.log(`EVENT TYPE: ${e.type}`);
-
-    // console.log(e.target.value);
-
-    // Update text in header to show live typing
-    // heading.innerText = e.target.value;
-
-    // Get input value
-    console.log(taskInput.value);
-    
-    // When doing a submit, usually have to use prevent default method.
-    // e.preventDefault();
+    if(e.target.parentElement.classList.contains('delete-item')){
+        console.log('delete item');
+        e.target.parentElement.parentElement.remove();
+    }
 }
